@@ -1,0 +1,18 @@
+@media screen and (max-width: 768px){
+  body {
+      width: 100%;
+  }
+  main {
+      width:100%;
+      display: block;
+  }
+  .ex-box {
+      width: 90%;
+      margin: 0 auto 20px;
+      box-sizing: border-box; 
+  }
+  .ex-box:last-child {
+      margin: 0 auto ;
+  }
+
+}
