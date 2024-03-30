@@ -1,15 +1,16 @@
-const btn = document.querySelector('#btn');
-const h1 = document.querySelector('h1');
-function hello() {
-    alert('hello');
-    // this.style.color = 'red';
-}
-function changeColor() {
-    h1.style.color = 'red';
-}
-function changeBgColor() {
-    h1.style.backgroundColor = 'green';
-}
-btn.addEventListener('click', changeColor);
-btn.addEventListener('click', changeBgColor);
-btn.removeEventListener('click', changeBgColor);
+document.addEventListener('DOMContentLoaded', function () {
+    const el = document.querySelector('.animate-title');
+    const str = el.innerHTML.trim().split("");
+    
+    // let concatStr = '';
+
+    // for(let c of str) {
+    //     c = c.replace(/\s+/, '&nbsp;');
+    //     concatStr += `<span class="char">${c}</span>`;
+    // }
+
+    el.innerHTML = str.reduce((acc, curr) => {
+        curr = curr.replace(/\s+/, '&nbsp;');
+        return `${acc}<span class="char">${curr}</span>`;
+    }, "");
+});
